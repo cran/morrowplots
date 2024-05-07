@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>National Yield Comparison</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">National Yield Comparison</h1>
+
+
+
+<div id="how-do-corn-yields-at-the-morrow-plots-compare-to-the-national-average" class="section level2">
+<h2>How do corn yields at the Morrow Plots compare to the national
+average?</h2>
+<p>This exercise demonstrates how to use ggplot2 to create a graph
+comparing corn yields on the Morrow Plots to the U.S. national average.
+We’ll use the data from the morrowplots R package, and we’ll also import
+national average data from the National Agricultural Statistics Service
+(NASS).</p>
+<p>In addition to the morrowplots package, this exercise also uses the
+dplyr and ggplot2 packages.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(morrowplots)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<p><br />
+</p>
+</div>
+<div id="visualize-the-morrow-plots-data" class="section level2">
+<h2>1. Visualize the Morrow Plots data</h2>
+<p>First, let’s take a look at the Morrow Plots data so you can see what
+we’re working with.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">head</span>(morrowplots)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 26</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt;   phase  year plot  plot_num plot_dir rotation corn  crop  variety      all_corn</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;lgl&gt; &lt;chr&gt; &lt;chr&gt;        &lt;lgl&gt;   </span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">#&gt; 1     1  1888 3NA          3 NW              1 TRUE  CC    Burr&#39;s White FALSE   </span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co">#&gt; 2     1  1888 3NB          3 NW              1 TRUE  CC    Burr&#39;s White FALSE   </span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co">#&gt; 3     1  1888 3NC          3 NE              1 TRUE  CC    Burr&#39;s White FALSE   </span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co">#&gt; 4     1  1888 3ND          3 NE              1 TRUE  CC    Burr&#39;s White FALSE   </span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; 5     1  1888 3SA          3 SW              1 TRUE  CC    Burr&#39;s White FALSE   </span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; 6     1  1888 3SB          3 SW              1 TRUE  CC    Burr&#39;s White FALSE   </span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; # ℹ 16 more variables: yield_bush &lt;dbl&gt;, yield_ton &lt;dbl&gt;, treated &lt;lgl&gt;,</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; #   treatment &lt;chr&gt;, manure &lt;dbl&gt;, lime &lt;dbl&gt;, nit &lt;dbl&gt;, p205 &lt;dbl&gt;,</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">#&gt; #   k20 &lt;dbl&gt;, stover &lt;dbl&gt;, population &lt;dbl&gt;, plant_date &lt;chr&gt;,</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="co">#&gt; #   plant_day &lt;dbl&gt;, soil_sample &lt;lgl&gt;, damage &lt;chr&gt;, notes &lt;chr&gt;</span></span></code></pre></div>
+<p><br />
+</p>
+<p><strong>1.1 Import and subset the Morrow Plots data</strong></p>
+<p>We’ll be visualizing the corn yield data in the ‘yield_bush’
+variable, but before we can compare corn yields, we need to narrow down
+the dataset. Plots 4 and 5 grow corn every 2 to 3 years, but plot 3
+grows corn every year. For the purposes of this exercise, we’ll create a
+new subset of data from plot 3 only, but you could repeat these steps
+with Plots 4 and 5.</p>
+<p>We also have a few years where ‘yield_bush’ data is missing and
+marked with ‘NA’. We can filter those out too so they don’t show up in
+our visualizations.</p>
+<p>If you look at the Morrow Plots data, you’ll see that each plot has
+multiple rows of data for each year. That’s because each plot has
+subplots. Some subplots receive fertility treatments and some don’t.
+This is recorded in the TRUE/FALSE ‘treated’ variable. For our purposes,
+we want the annual average yield, and because treatments affect yield,
+we’ll calculate two annual averages - one for treated subplots and one
+for untreated subplots. None of the subplots received treatments from
+1888 to 1903, so those years will only have one average for untreated
+subplots.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="do">## name the new dataset mp3 for plot 3</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>mp3 <span class="ot">&lt;-</span> </span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  </span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  <span class="do">## filter to only include rows where &#39;plot_num&#39; is 3 and &#39;yield_bush&#39; is not &#39;NA&#39;</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(morrowplots, plot_num <span class="sc">==</span> <span class="dv">3</span>, <span class="sc">!</span><span class="fu">is.na</span>(yield_bush))  <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  <span class="do">## condense the filtered data and group it first by &#39;year&#39; and then by &#39;treated&#39;</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(year, treated) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>  <span class="do">## calculate the average &#39;yield_bush&#39; for each grouping</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>  <span class="do">## and put that average in a new field called &#39;mp_ave&#39;</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mp_ave =</span> <span class="fu">mean</span>(yield_bush))</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt; `summarise()` has grouped output by &#39;year&#39;. You can override using the</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; `.groups` argument.</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="fu">head</span>(mp3)</span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 3</span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt; # Groups:   year [6]</span></span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt;    year treated mp_ave</span></span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a><span class="co">#&gt;   &lt;dbl&gt; &lt;lgl&gt;    &lt;dbl&gt;</span></span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a><span class="co">#&gt; 1  1888 FALSE     54.3</span></span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a><span class="co">#&gt; 2  1889 FALSE     43.2</span></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a><span class="co">#&gt; 3  1890 FALSE     48.7</span></span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a><span class="co">#&gt; 4  1891 FALSE     28.6</span></span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a><span class="co">#&gt; 5  1892 FALSE     33.1</span></span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a><span class="co">#&gt; 6  1893 FALSE     21.7</span></span></code></pre></div>
+<p><br />
+</p>
+<p><strong>1.2 Create a line graph for plot 3</strong></p>
+<p>Now you should have a dataset called ‘mp3’ in your R environment,
+which contains annual averages for treated and untreated corn in plot
+3.</p>
+<p>We can visualize the plot 3 yields in a line graph with ‘year’ on the
+x axis and ‘mp_ave’ on the y axis. We’ll use the ‘treated’ variable to
+plot treated and untreated corn with different colors.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(<span class="at">data =</span> mp3) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y =</span> mp_ave, <span class="at">color =</span> treated))</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAEgCAMAAABcujGyAAAA3lBMVEUAAAAAADoAAGYAOpAAZrYAv8QzMzM6AAA6ADo6AGY6OpA6kNtNTU1NTW5NTY5NbqtNjshmAABmADpmAGZmOpBmZmZmkJBmtv9uTU1uTW5uTY5ubqtuq8huq+SOTU2OTW6OTY6ObquOyP+QOgCQOjqQOmaQkDqQkGaQtpCQ27aQ2/+rbk2rbm6rbo6rjk2ryKur5P+2ZgC22/+2/9u2///Ijk3I///bkDrb25Db/7bb///kq27k///r6+v4dm3/tmb/yI7/25D/27b/29v/5Kv//7b//8j//9v//+T///9w4YKrAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAZ80lEQVR4nO2dDXudOnLHTxIr3qydm2bbXd/bNDdbu932xnf32m0ct0mQ7a5jm+//hYp4HUkjIZCA4TD/J88BhBhG8MvoxSB2OYtFWLulHWCxfGJAWaTFgLJIiwFlkRYDyiItBpRFWuMAzaKVwAQxK6Scmb5IiTl0igFlQEeZScyhUwwoAzrKTGIOnWJAGdBRZhJz6BQDyoCOMpOYQ6cYUAZ0lJnEHDrFgDKgo8wk5tApBpQBHWUmMYdOMaAM6CgziTl0igFlQEeZScyhUwwoAzrKTGIOnWJAGVCvGeHaNZMYUAbUa4YwoPc/Hh+f5vnDz8dvvrWLSkmKnkCUrJByZguAPny4yO9/ung6P82//kNeL2olKXoCUbJCypktAHqrcLw6ffjz5/z+nz/Xi3pfkqInECUrpJzZAqBKRRS9f/cNLIq0l4Xm8Y1FQGLh83sBfTp/n9++KcmsF/WOJP83E4iSFVLObCOCPvz8vugqmRFUKUnRE4iSFVLObALQ+x+LPnzObdB5zVCyQhvQis+ymi978e+5Fz+HGUpWaAP69VjplMdB5zVDyQptQH1KUvQEomSFlDMMaIKiJxAlK6ScYUATFD2BKFkh5QwDmqDoCUTJCilnkhXJxScDujorpJxhQOOLnkKUrJByhgGNL3oKUbJCyhkGNL7oKUTJCilnGND4oqcQJSuknGFA44ueQpSskHKGAY0vegpRskLKGQY0vugpRMkKKWcY0PiipxAlK6ScYUDji55ClKyQcoYBjS96ClGyQsoZBjS+6ClEyQopZxjQ+KKnECUrpJxhQOOLnkKUrJByhgGNL3oKUbJCyhkGNL7oKUTJCilntg4oaytaemIRjqDJrJByZusRNEXRU4iSFVLOMKDxRU8hSlZIOcOAxhc9hShZIeUMAxpf9BSiZIWUMwxofNFTiJIVUs4woPFFTyFKVkg5w4DGFz2FKFkh5QwDGl/0FKJkhZQzDGh80VOIkhVSzqQqkpNPBnR1Vkg5w4BGFz3eBDErpJxhQKOLHm+CmBVSzjCg0UWPN0HMCilnGNDoosebIGaFlDMMaHTR400Qs0LKGQY0uujxJohZIeUMAxpd9HgTxKyQcoYBjS56vAliVkg5w4BGFz3eBDErpJxhQKOLHm+CmBVSzjCg0UWPN0HMCilnGNDoosebIGaFlDMbAbT8/rb6qOwPn/ljsjOZsa24IRliZZSIA3qrwMyv6q9yn/LnuOcwgwDqoMQH7iYAvXr9WxFBn369UBsPf/5cBdRSCYoeb4KYFQZ0EvVW8UXVrr4af//uW/7wQbH6stBMzrGUhGP+mUlmpRHezQXUC+j9Txcqit6+aQBVSvB/M94EMStTtkHRQDZFBDWi9RoiaKmr0y6CKo0sPixfvAliVqZypmQEq+YDAR3SxzL/L6wIUG6DzmQGBxRDND2gwsy+BkBV3f70189P5++5Fz+HGRegNmjJARVW9jUAqsZBXxdVO4+DzmNmAKAe9PKwbMiZVgWoU6FFdosSWnsBqNG7AenDANWyM6B7ZGX1gAptUZlhQPfHytyAGuQxoFCBRfaIElo0ABUOK6GA6o1HV7Z+BxjQqnzxJohZIQWogGuBhCIn8nXDZhIDShxQYayAbTegYgSg5omMVVOJOXSKAV0boKIldSJA0TVLiTl0igFdG6DdcJATUAEajyMARYOpqcQcOsWAEgFUxAKqBb4WUOuvl24HkHUGdI+sxAJa0+AEtBtH7wNUZDqgYYRinSwGdI+srBxQgW0xoHtkhQGdRAzofgAK+0IKUA2xGQH9v/8K3HHz/FMQagwobUDNvrX2Y+wEVOmAhhCaBtC7330M3MGAzm0lIaD4UHlKQPsSGFBKaO0xoC7QJgL07nC3O7p79Zfd80+PZ7udYlAlFWlqR96kfX+7e/YfDOjMVtx/Rbe2sPuuAWo2PLvVYED11qd5xikj6N3hQV6wWPxcv/jy/e1JsXz+Se3o0o4KRhnQma2EA4o+475PgJ7UNXhB59+/VKlqR5NWLq9HAXq9250UiDOgScwMAbTFrariYY9cW/UBCqp1E1AHgH3b4wBVzc2CJKWjAtVi8awEtEkrCbt7NQLQyxf/+/akDMQMaAIzxhNwIJrZNz4doKK2sjCgdZj7/vbZxyaCNmmjAS2ir2oyhPavWD0SAt0S2IQdWiLYEFoW46fbMHeaG9aMIT0ziAg8uVctoDfPql77jYLxpoqgbZoCbEwvPhxQ93+sUFGKffNGUNBahHuzLvbB4NgfQQW2sxkLQBuzlmvpIqjipwT08awgsyBSQXl3+Oyj2tGkfX97MLKTdK2qeNXHYkATmBGQna7aHgSoMLJ0PyKLANR6DyQVoPnl7qAa8lRDSipiXhaLXwo6ix1t2vhhppu6YcuAJjBjhjiTJDNzPKDOONwdafxvgfuQhOGAJhcPM00NqEAAxYlAujc4oK1pM6MGqImhUK4woIGihNZMgLrAaxNGASoMQAXwRdgYrhrQkNZnJbffoaKE1sSAtmQh4AmQOT2gjqZEAKCu/0edpoARk95JKlqgJyFHuf0OFSW0pgO0IgECaoSmOECrJZLuLhIKKMIhTUDzqtPleCAFyO13qCihtQCgKKjxgGaup0otK6sFtNAlj4MmMRMEKAQ1ANAu+xyACs+VmQJGTEgEDRigcvsdKkpozQVoVwMzoMHS/xYfVL/nDGiQGcglwBXszLTRewRQC6NeQAXui+2V1XjAsg0GdFDmwYCWz+4Fye13qCihRRJQrUFgJjgBzfYa0HC5/Q4VJbSmBLRZM2tWvbMDft2AAqy2Cmj5eH5II9Ttd6gooTUNoEJbtZp+OiijARVGxr0G9PHs6PHsJKSid/sdKkporQ/QLm6agOK+mG6tFFCF5uVR9QgfAxprBgHUSGNARwB6fcDPg6Yxw4D2ZR4MaH5Z0hnwUpLb71BRQmtRQCFfcwCKHbEaQItGaH7Jf+oMln5jAwA1d/cAKqxDMEAx83sKaLDcfodqU4BmAmFAZH5A7YNWD2g1SnRUNCb/8LF7be7723LgqNppRUcc0O//6G+Guv0OFQPaYBUDaPWXo/UA2rzJefPHo3armtrhxRfHa54M6HgrBkEjAQV8DQBUgOUoQK32MOL9VIA+/tsv//Sl2SoXRUgdA2j5rc76I538rU5LTkBNAPoAFeMBNdJtX5znFTAFyzUOUGkpswC9+/2Xy5Nmq3zXM3e+KO8D9Pb4h8/50/mp+sxxvWBAgVyAioGACpCU5R2EqwTUl7lsZqr5mY7ymwNQ4ZdNz6oNao0geQC9ev1bEUHrD8Xz9+JtOQG1G3l4JWqlih5AO5TXCWgTM8u/p8OQqeYeGVnF37/7lj98uKgXReLLQrh3WxM6RUiTjM8q0nO0MTWINf2H0HMac4yESZiTjrgKMWJikTBAixo+zy9P6q2bcqaldtNUL6C3b0oy64XfjwHajwiqBZ+8S7aiHx6keiKoudv6U/5KI+j1Sckl7MVHdJKsCMqA1mrrcaGZqZPiAbV2I4A26wMAzYQPUAnTpgH08d/V7/c//GfZ6Dwox0HbNqj10qZ3oP6e26AeNYAKBFDslXT7+K0BOkbW/KCQYUXk0/n7qhf/nnvxutpQqQEKByiNvNbxDOhAQK+rKXDb6Rt4HNSn6h52dGiAokgax6NDTyMARVBPAqjwmVkC0PpRZX7cLkxC/6nMOOlCju8D1N7r2DUZoDJzigElb8W8wzqggwyAlKUBlV0aOUCrKXB5ftAwCXM1z4bxuRigcIjK8ENmlAFV/f1aPUHUU/xA7SGgImNAB2UeDGi4PMUP1D4CKtDvywRZ6FIYUAY0jRUTUJEPDKC4TQ+g+AeW0PQ9BZTfix8gDNBoiRkAzVYLaMgXkhjQRvsNaDX6TwxQnptpgIS5wYBODujjGQMaLBNQ759dBlj1AupK3wig4d+Y8xU/TOQB7evv7CugoBFKD1DuJHVaDFDPiT0DUIZCfJkd0PJJ+t3uxf8c1pRVj98Vv45Xjk1A1bwNYQoofo8YUIfVPQY0r58Irbhs3zRWgLq/LMudJNxK35i7MLZEGmfmBLQ9ygmonBLQlstwQLmT1GmbgMpMBzR3E+oCQ1jKkkXQ4G94M6AmEoIB9YFhANq8YGy0QdFJ67CHRbiTxIBOCmjxUz44NziCBiuk+H4RB1T09JLMnSKRM35AwzUEUL0JOhOg5dsb5Rxi6i1kBnSolQ0DWhM6NaDl39UvD6qxIwZ0qJWhgKZyZjuAFi3Ro/LLXGo6Rscrx+MB3Xu1k3U4JtcYPudG8IknM42cCy6UZPtTXgFZr4drEM1B4gjqj6B4PENTkzgj9juCMqBprIisBRTlZROAiowBpWqFAWVA401MaGUbgNqtGNn9MqApNAOgKIx7CqgEi3GAphcDilgR7Q8OKM4QAzqFGFAvoPh46J4DWi4Z0NECd3AaQMF96+p6hwceM6PEgBpaE6B2r3NKQFs41wGojlIcoGqFAR2umQCFD/kIY9vywG1mnBhQQ/QBtbiYG1DrvA6E0gA6tobXn35nQGNFDVAkPFqA2qHUMhOt9IB6XttwAlqsbQ/QMXWQkg1olzLKEctgrhl1ASqyBQD10GWIAYUKvmxA0YCKxIC2k9FVEdSKz3C0PpsLUMO49L23pufULjADOlwooAGXPzWgcHI30VgRzQ7AhwUo0saAmgDQ8gn3MERdgHoPhy2YbOOAypGAitkABTHVyKAD6mol9jgTGAotQAOPdALqM8KAui7gAEBBzdpgZFoZJA+g5pnNIdFJAQXzHhppIYCCt4lULBgFKMhSAlqYYUB7j7MAhX8dH+GI3tgUtZV+QI14iigcUKzUEgFUGsse6112CWOh1OxrYkBhkdcPqFkl6uoDVNpryG4M0IDLpAOqHVk/5DkQ0KKmYUBDOgCzAIoy1/WKUgAKyo+VWpvauEv0HWIc3+ZXv7kJKwPafwGHAmoPP1qAuljxGoUVtQ9QeCbwbSHnOdGrAkIZFuBgPmla0XL1INoPKEbo1gD1XEMHoCGjdBagkJtQwTFMeFtENgRQ7eSmsKsibUBhZdzly/oA7anmTUDB2WIAdZ81MYdO9QP69fj4+IfPQd/qnBRQUM22tAUDKmIBbYe43OdErgoodTSgfkLHAapVCXD/mgC9OlW/T+enAV87dl/D4YAKA0cM0OBHf7RPr4wANCRW21fF6Fq3aVapQWJaQDU48RCKBdCqG78OQJ9+vVCLsO/FewHV9s4LKNIzAiF1KkA1KjRKTPSCAPUSatCfG2cLANRsUKwF0KJqPz4+ze/ffcsfPihWXxZyZXZPRCHBXglS3UdUc2wIOAGGyNGUfukThXQ/9dI5fcigWT6ksSa1VKnN2wHyFjKPx7era+i4YJ1Z7So3P+DUmrpLaOyURbq0k+dXL6D3P12oKHr7pgFUyf8fGflfpweT9k8ddgSFMUtk/ggaPJFR19LCI6jDivPTg7iMgU4QOuuF1LaMY5rEXN80ziBd3fkugrZW2g1PBO3KaLUn1hJBS12ddhFUyeV1dVF6AW3zRAMahpAPUA/mYwGtyqcDKjMcUM2A+vEC6trhAtS4ymgdL9BdqwM0rA0K4bOvH7wrAwA1RnjgSOZQQE1Kq5VUgGocdOG0/bUBNdt9Wdm9kRLZaWXEkjRAgaF9BlTV7U9//fx0/j6gF19fDMf/fQtQO6v20GUqQM2wqQPq7moNA1TmEBO4o/mxK34EUCkdZsyMSPQ1AB0QQa096wFUjYO+vsiDxkGziQHVU1BAMaT6AHVhOBxQjcF2B/zpB9Sx08opAwBt9nnaBmXpsRu2GkAxuS8deov0K47esOZyhQNajWAaDKGwGYBKA1AnhiMAxf57wvJKO1HP2GLuBbS0JLXtLl1Jv0OSAdUvlQNQeOHzOl8PoKK6VBkAzA8oxpQOeAUo/EiVE8NhTVAXoLDGkHainrG14uUTVlRG5YQC6l4pAUXbtPsKqF58PQEBVM/b9dBrngYCKlCo+gB1FicAUECc8/kXFFBHrA0E1GwJDARUbhxQvJZLC2i5rb8wrHegYCI8tgW0PXNSQPG7nRzQ7kwjANVOzYDCy9f+OgHVOzIlRw2b1ZqQOqCwu9Me6AFUpgW0K5tvdFhqS+NQLd9wQGFmHFDjiDBAMwY0EaAdRyDK2n2g5pgaUHCTIgCF4/G+sQ20l5IEUJkNBlS3zoCaNcxAQJsquUa1bDzqgMIYCXpX0GgGAC0NJgO0i0qDAUWsxQLarPQCajQ20JzbAxRcmlzaFwo0NnsBrXLl8MD2t8M8g2vCBLTnbvoBbe91CKBZGKDt+5hI+9RldRCgIC8Dim2NA7RGqyarDEcCAbTtXmlbMYD6SjgM0FCrQU9yw+wMKKqgS4esA0Cbe2ABCpucIusAVSy4ANWCpm5lKkC7e93c8JUAqncI9DXTNAOq7TW723V9Ltu/dtRk4YAa9bEoMwkvoJm3R9FTPh1QOY5zW8MBxRoEKQCV2TYBbaCwAIURsGpyegCtrxI42GwwNlMtGYB2ZrI4QLubXW8sAqjmiGkFO8KMtdl2AUU6Bj5AtUZjW7dXgDaHegC1OjRCS5c6oCKLArQ5eGFAu/o9FFB9zhFzRbO894CiQyvSCag53F6T6QC0uUqZdhQiCKhoPBB1AI0DtKVoVYAiq1sE1PVYow1os18DVGitvBbkesYgFFCXROtOZgNamcJfx/RJdka7UqUENIzPOEAziaTpphnQDAG0fX5BamxmLaCdyWAm0gJq3tmFAUXibZAvWBWnm95nQDNAl5aMAyrAcU5AG7QGAyrrRmgWBmhfBWuFnpL/BQG1cjOgQerIAiltu0+7Pk1NXEc6rZHnBtQy7nYEAJqlArRLWApQo61hWuk73HMqBtQGtGsWWIA2yTqgchigbaYO0AwlCx2M8Z4oOaCBmhxQ50VNzKFTUwNqlk86AdXeZQwC1Jx9DRtCabfg2VBApUSyu19RtZMY0Ck0DtBQ2TOHgBRtCgyhTzsiYWbZ5pXVZB/2NBqmaf20IGd1MvN05RESyY7O5LH4bBud6isx1iPXhCN5dzWXLuy084PajTk7glbNQ71O1XshegSFeXKJZ9P/40OTTQSF+3LsrKZN056tJSJorZERVC+2uWvNETSs+CigdUKu5QKDTAigYMARvMZdoSW73X5A4a8U2vkYUHTXFgC1i4cBmkk4Cqq1APWDIKCysiK7jfZAaAEY6X4tQO0s4NeuBHCtEFC0fM0eBhSkOgA1DgJPJNmAGmxaHSYNUI1fFFCUdbxMGVaksZrXyuYBxS9JZl1BHVA3Ehag3dyaNV3WIwB6NEYBRbLA6i9wNGuNgCKNMLiDAa0l9AweQIXGYw6gcgROtGUJAYXfUzObF+261IjGxYBOIXqAuq9ZBgCVuhWMaoNY2CHQADWghgdg7QSnc6sE1Pn1kM0C2pTPvcsHqHQAih4kS3U5MgeguXYIMGl1taTv88MM6BRaJ6DNZQWAuo/p7HaAunwxIqsN6N5FUK7iHeVz7/Kx1nT3LUA9UMMcZg/K64s1gZz/HCsF1CEG1Hdt3LuElmUooGbHye+LOQNnzymooJXGSgOo8wwzaWWAZk5A+zUYUCNbXyuCClpprDCg4+RsPfbLWUeHAtpjnwpaaawwoOMUBagDsTRMkEErjZW+Z7ATc+jUhgB11tEMKCIGNIUY0OmsMKAJNObx81grTpFBK40VBjSBGNDprDCgCUTJCilnGNBYkbkPyayQcoYBjRWZ+5DMCilnGNBYkbkPyayQcmaDgAZ+qzNUZO5DMiuknNkeoE/np0FfOw4VmfuQzAopZ7YHaOj34kNF5j4ks0LKme0Bev/uW/7w4aJYe1loSo9YNLT0lCK1QgG9fdMAqhT//5NMoEhmhZQz0xdpKiBNDY+gSpMWfaVWSDmzPUC5DTqTGUpW1gTo0/l77sXPYYaSlTUByuOgM5mhZGVVgGqatOgrtULKGQZ0wqKv1AopZxjQCYu+UiuknGFAJyz6Sq2QcoYBnbDoK7VCypmtA0pFpP7mSskZSr7EiQFNJkrOUPIlTgxoMlFyhpIvcWJAk4mSM5R8idO6AWXtvRhQFmkxoCzSYkBZpMWAskhrhYCWz03f/3j8Q7U4PjWeBVzMmafz49cXizmjXwp9sWKtD9BbBcPDz6f51zff1Eso9z9d6O9EL+VMfnWqXt1ayBn9UuiLNWt1gF69/q0IWvUrUrfq4l+d6u+jLOWM8iI3X46ZTfql0Bdz+5JSqwO0qlXBO3zFQn+jbyln7t/9TVXxCzrTXQp9sYQvqbRSQMtaVTX4ypel9Heil3Lm/sdTRedyzoBLoS8W8CWZVgqo6hL8y69lj+S9+U70Us4sHbXgpVjal3RaK6B53dgrotZizT7DmYd/bZuiSzijXQpugy6oslYtwkLRPa1uivFO9FLOqF58EbIWcka/FPpizVopoPntsRrg+3qsdLr0OGjljPJCDYcu44xxKXgclMWaQwwoi7QYUBZpMaAs0mJAWaTFgLJIiwFlkRYDyiItBpRFWgxooC4Pip/rg/zxbLd7/inP7w53u91RfvfqL+UmayIxoIG6KTB8PDt5PCtAvX7x5fvbk2L5/NPd4cHSnu23GNBAKSLvXn1SnKr1v38p0u5+9/Hu8GRpz/ZbDGioiupd/duVOipCarF49rFgdGnH9lsMaKjuXv332Ymq3cut72+ffSwjKAM6rRjQUD2e/enVp/zmWQXkjQL1hiPo5GJAg3W9O1CYFmQWYCpQ7w4Z0MnFgAar6g+pYSYVRS+LxS9vTxjQicWABqvowy/twgbFgAbr+mhpD7YoBjRQd4d1/501qxhQFmkxoCzSYkBZpMWAskiLAWWRFgPKIi0GlEVa/w9FC+RoIpmTzwAAAABJRU5ErkJggg==" /><!-- --></p>
+<p><br />
+</p>
+<p><strong>1.3 Smooth out the line graph</strong></p>
+<p>Those lines are all over the place! So much so that it’s kind of hard
+to read.</p>
+<p>Try the same parameters with geom_smooth() instead, which creates
+trend lines that makes it easier to view long-term trends in varied
+data.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(<span class="at">data =</span> mp3) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_smooth</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y =</span> mp_ave, <span class="at">color =</span> treated))</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p><br />
+</p>
+<p>Much smoother! Notice how the axes of the two graphs differ. R
+automatically adjusts axes, so keep that in mind when comparing
+graphs.</p>
+<p>Now that we know what the corn yield trends from plot 3 look like, we
+can add in national averages for comparison.</p>
+</div>
+<div id="get-yield-data-from-nass" class="section level2">
+<h2>2. Get yield data from NASS</h2>
+<p>For this exercise, we’re using data downloaded from the NASS website.
+(Alternatively, you could use the NASS API to import data directly into
+R, but that requires registration. For our purposes, working from a file
+is easier.)</p>
+<p><strong>2.1 Combine NASS and mp3 data (choose 1 option)</strong></p>
+<p>You have two options for NASS data. You can either use this as an
+opportunity to learn how to use NASS and download the data yourself, or
+you can use the copy that’s saved in the morrowplots GitHub
+repository.</p>
+<p><strong>Option 1: Download NASS data yourself</strong></p>
+<p>To download the NASS data, go to the <a href="https://quickstats.nass.usda.gov/">NASS Quick Stats webpage</a>
+and follow the steps in the video below.</p>
+<iframe id="kmsembed-1_l2vy5yng" width="640" height="394" src="data:text/html; charset=UTF-8;charset=utf-8,%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22en%22%3E%0A%3Chead%3E%0A%20%20%20%20%3Ctitle%3EHow%20to%20Download%20NASS%20Data%20%2D%20Illinois%20Media%20Space%3C%2Ftitle%3E%20%20%20%20%20%20%20%20%20%20%20%20%3Cmeta%20http%2Dequiv%3D%22X%2DUA%2DCompatible%22%20content%3D%22IE%3Dedge%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Clink%20href%3D%22https%3A%2F%2Fkms%2Da%2Eakamaihd%2Enet%2Fdc%2D0%2F5%2E125%2E16%2E394%2Fpublic%2Fbuild0%2F%2Fcss%2Fkms%2Ecss%22%20media%3D%22screen%22%20rel%3D%22stylesheet%22%20type%3D%22text%2Fcss%22%20%2F%3E%20%20%20%20%3Cstyle%20type%3D%22text%2Fcss%22%3E%0A%20%20%20%20%20%20%20%20html%2C%20body%20%7B%20margin%3A%200%3B%20padding%3A%200%3B%20border%3A%200%3B%20height%3A%20100%25%3B%20overflow%3A%20hidden%3B%20%7D%0Abody%2Eembed%20%7B%20text%2Dalign%3A%20center%3B%20%7D%0Abody%2Eembed%20div%2Emessage%20%7B%20margin%3A%2020px%200%3B%20font%2Dsize%3A%2020px%3B%20%7D%0Abody%2Eembed%20a%20%7B%20font%2Dsize%3A%2016px%3B%20%7D%0A%0Abody%2Eembed%20%2Eplayer%2Dbackground%2C%0Abody%2Eembed%20%2Eplayer%2Dbackground%20span%20%7B%20background%2Dimage%3A%20url%28data%3Aimage%2Fjpeg%3Bbase64%2C%2F9j%2F4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP%2FsABFEdWNreQABAAQAAAA8AAD%2F4QMpaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu%2B7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI%2FPiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI%2BIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI%2BIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMzFENTlFMDMxQTgxMUUyODFDOEM0MTdGNkQ1RTg4MiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMzFENTlFMTMxQTgxMUUyODFDOEM0MTdGNkQ1RTg4MiI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIzMUQ1OURFMzFBODExRTI4MUM4QzQxN0Y2RDVFODgyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIzMUQ1OURGMzFBODExRTI4MUM4QzQxN0Y2RDVFODgyIi8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2B%2F%2B4ADkFkb2JlAGTAAAAAAf%2FbAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f%2F8AAEQgAHgfQAwERAAIRAQMRAf%2FEAIkAAQACAwEAAAAAAAAAAAAAAAADBQEEBgIBAQEBAQEAAAAAAAAAAAAAAAABAgMEEAAABQMFAAEDBAEFAQEAAAAAAdECUpGhAxFREhMUBCExBUEiMgZhcYFCIxXBghEBAAEDAAgEBgMAAAAAAAAAAAERIQLwMUFhgaHhA1GREgRxscHRIhOiwhT%2F2gAMAwEAAhEDEQA%2FAOg7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUA7nyOoB3PkdQDufI6gHc%2BR1AO18jqAdr5HUA7XyOoB3PkdQDufI6gHc%2BR1AO58jqAdz5HUBsM%2BN817MWQiMseYzLG8z%2Bhm3XX7fb7BNoq37fH93c%2FXjP5aS8Zcfy8WLFlyE5rMxGeMzP7kX66ff8AUby7eUREzGtxx7mOUzETeEXc%2BR1GGzufI6gIORAO0%2Fr34z8d%2BQ%2FrrcfymEZlkfwyF9Ht%2Bv6GAoPzX4LP%2BNdzJxZvjGejcpfQy%2Fw4gFVyIBDk%2BS5rzaTS%2Bn0%2BuoDz68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gHryRbdQD15ItuoB68kW3UA9eSLbqAevJFt1APXki26gNjmWhHuWtQFv8AgPwL%2FwAx38MxYejhrq3lrz5f5KICy%2Fsf4L4X4v8AF%2FHbh%2FfnflIsmZ33P9p%2FTT9CAVPxvj4svxM7HNIsjMTs%2BJ%2F2cR4z0yMPcjL6kArORAOt%2Fsv9j%2FG%2FP%2FH5Pj%2FFzmXB7OLOB8cjfoepGZEbeJgMfl%2F7L%2BO%2BT%2BFz%2FAbldmzE3FwzOZwJ7ieTnaERft4kQDk%2BRAHIgFtg%2BJ8j5HxfjNwYyIs7nFjxdnI3uY392Tg4yb9OJl9%2F%2Fg7TTDCM8rR58aOfuO%2F28pjHHH05Yx%2BU1m%2FHZ42Q%2FP0b8L4rnYyN2RuuP5BZXP8A2EZ%2F9fE%2F48eREPPHuI7kzF642vy4N%2F5c%2B3TKZicco2eO3ir%2BRDSnIgEOoDoPxf8AYcH4%2FwDEFhIjyfI5uMsf1Ii1%2FUzQBUfO%2FJfL%2Bdk7PkZOWn8WF9Gt%2FwBCAa2oC5%2BB%2FX%2FX%2BOL5R5yZmyFnd8fCeMnE4vjNJz%2BT9S4%2Ff6fQwytFd1edDG80305Vevnf1o%2FjfFLIzOx%2BZrsLPkY3sZjYw%2FkY%2BxmmRztDLT7megTaafGPIxvFd1foyX9Ye78e3O3Ow%2FlOxNz%2Bfg3h1vy9JH2kZ6nr9dOP2%2FUWl44c0rbz%2FjrRfm%2FwbPxrGvx5y%2BQzty%2FHyGeIsZty4dOWn1dq3930OwzXnDVLfD7VVGpbNoSCoals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hIAals2hAGv8AkBZfhv7B838R3eZuN3fx59hGf8NdNNDbIBu%2Fm%2F7Iz8p8DCRtPH8jHkJzmfcv4n9SNQGjj%2FI48XxMhN%2BubJjPA1v1%2Fa1x6vc4z%2B5u%2FTQBXagOk%2FOfk%2FxGf4eVvw8jCy5XMdkaWJxG7joRaOMiJuhAPP5D8j%2BJyficuPHlZk%2Bbkbja5zcbmcuDiP8AUtC%2BmoCi%2BJjbm%2BXhwuMybkyNY4y%2B%2BjjIvoA3fjfjMeV3HkZkZ42Nycmta48vL97eX8ibx04fyP8Ax9gDB8c%2Fj%2FLY%2FwD7sbXYDy4srHdZm4sPY7i7if0%2B7RJiJ1pMVMP47A8yNxu4Oa12M%2BTWk7TA7Jk0c4tP2vaTTP8AT9RVD%2FGY%2BvI8nH9CebNXNLjwxNymWh%2FXJry05N%2Bn%2FL7GArdQEXJ0HWUA5Og6ygHJ0HWUA5Og6ygLz8W7%2B0f%2BTm8LD8OmXlr0c9OBd3XzPt%2Fjpy4BlqvpFflUx120n782ybv7r0%2FB%2FYfHtwebTzc%2Bzh%2F0duh8v4%2FbsGr%2BrffrxpxS3p3dflXgjyu%2Ft%2F8A5L%2BbD8X%2FAD08%2Fbx7j2Pu4dv%2FAORiNlN1P69KrO3j16of7E7%2BzcMP%2Frs%2FZzydfDo07Pp2cuk%2F5%2FbXl9QtXTTWsVpppqUnJ0HWUVDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAcnQdZQDk6DrKAyTn6lox2v6aaKAyTsv00Y%2F%2FH2%2F2%2FUBk3Z9C1Y%2FTT9v2%2B2n6fUBjll0L9j9Prp9v9%2F1AOWWD%2F8AH22%2F12AeeToOsoD%2F2Q%3D%3D%29%3B%20%7D%0Abody%2Eembed%20%2Eplayer%2Dbackground%20%7B%20width%3A%20100%25%3Bheight%3A%2030px%3B%20bottom%3A%200%3B%20position%3A%20absolute%3B%20%20%7D%0Abody%2Eembed%20%2Eplayer%2Dbackground%20span%20%7B%20width%3A%20140px%3B%20height%3A%2030px%3B%20background%2Dposition%3A%20100%25%200%3B%20display%3A%20block%3B%20float%3A%20right%3B%20%7D%0Abody%2Eembed%20%2Eplayerv3%20%7B%20height%3A100%25%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%3C%2Fhead%3E%0A%3Cbody%20class%3D%22embed%22%3E%0A%3Ciframe%20id%3D%22kaltura%5Fplayer%22%20src%3D%22https%3A%2F%2Fcdnapisec%2Ekaltura%2Ecom%2Fp%2F1329972%2Fsp%2F132997200%2FembedIframeJs%2Fuiconf%5Fid%2F26883701%2Fpartner%5Fid%2F1329972%3Fiframeembed%3Dtrue%26playerId%3Dkaltura%5Fplayer%26entry%5Fid%3D1%5Fl2vy5yng%26flashvars%5BstreamerType%5D%3Dauto%26flashvars%5BlocalizationCode%5D%3Den%26flashvars%5Bks%5D%3DdjJ8MTMyOTk3Mnzk%2Db2VjWB%5FvceUsVch1Gw5d8xtnH1n6nnjlm1hI4u1vX3IQTDt%2D0%2DDLfcpDHXsKMPaELcBEoilxuTOHiJBVpQ2H949baVJ9Z%2DuTjD%5FpGXdQm2z2kaNhvYU9hzZjYskegZSPN7DVs7AiwJ7nmuCmG%2D1DdDMK8LFO2%5FicbbB9mk7SHxX1t0x0Otd6e1h8gXE6%5FWecztgySY13IyR2v%5FtrEKWSrsy3fsjVDi%2DqVcn3RNebPRL6f0Jq%2DXbiXQDDLVHzu6A2SQs%2D1F8MijvA3CtHGtbQ1PX4kgA6lvi3KQQ%2DO6cvBWMqgGEM1CwkqlD79EW4Ltnqve7kAmJbS1DaG35vIl4C6s%2DM%2Dfgjo2KpdhWKwVkA%2DpFxz7hHKMd9Sn3TE6XPXck0HxE%5F4SXHqZDK3qAnSXd%26flashvars%5BsideBarContainer%2Eplugin%5D%3Dtrue%26flashvars%5BsideBarContainer%2Eposition%5D%3Dleft%26flashvars%5BsideBarContainer%2EclickToClose%5D%3Dtrue%26flashvars%5Bchapters%2Eplugin%5D%3Dtrue%26flashvars%5Bchapters%2Elayout%5D%3Dvertical%26flashvars%5Bchapters%2EthumbnailRotator%5D%3Dfalse%26flashvars%5BstreamSelector%2Eplugin%5D%3Dtrue%26flashvars%5BEmbedPlayer%2ESpinnerTarget%5D%3DvideoHolder%26flashvars%5BdualScreen%2Eplugin%5D%3Dtrue%26flashvars%5Bhotspots%2Eplugin%5D%3D1%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20allowfullscreen%20webkitallowfullscreen%20mozAllowFullScreen%20allow%3D%22autoplay%20%2A%3B%20fullscreen%20%2A%3B%20encrypted%2Dmedia%20%2A%22%20sandbox%3D%22allow%2Ddownloads%20allow%2Dforms%20allow%2Dsame%2Dorigin%20allow%2Dscripts%20allow%2Dtop%2Dnavigation%20allow%2Dpointer%2Dlock%20allow%2Dpopups%20allow%2Dmodals%20allow%2Dorientation%2Dlock%20allow%2Dpopups%2Dto%2Descape%2Dsandbox%20allow%2Dpresentation%20allow%2Dtop%2Dnavigation%2Dby%2Duser%2Dactivation%22%20frameborder%3D%220%22%20title%3D%22How%20to%20Download%20NASS%20Data%22%3E%3C%2Fiframe%3E%3C%2Fbody%3E%0A%3C%2Fhtml%3E" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="How to Download NASS Data">
+</iframe>
+<p><br />
+</p>
+<p>NASS will give your file a super long name, so rename it
+“NASS_data.csv” instead. Then you can import it into need to make sure R
+knows where to find it, which you can do in one of two ways:</p>
+<ol style="list-style-type: decimal">
+<li><p>You can move the NASS file to your working directory. In your R
+console, use getwd() to identify your working directory and then
+manually move the file to that folder. In the code below, replace the
+URL with your file name.</p></li>
+<li><p>Or, you can add a file path to read.csv() to tell R where the
+file is. In your R console, use file.choose(), which will pull up a
+window that will let you navigate to your NASS file. R will print your
+file path, which you can then add to the read.csv() code below. For
+guidance, see this <a href="https://www.statology.org/r-file-choose/">step-by-step
+example</a>.</p></li>
+</ol>
+<p><br />
+</p>
+<p><strong>Option 2: Get NASS data from GitHub</strong></p>
+<p>If you feel like you already have plenty of work to do and don’t want
+to learn how to use NASS, that’s ok. You can use the copy of the NASS
+data that’s in the morrowplots GitHub repository.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="do">## If you chose Option 1: Download NASS data yourself, replace the URL with your file name, and path if necessary</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>NASS <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://github.com/SandiCal/morrowplots/raw/main/vignettes/NASS_data.csv&quot;</span>)</span></code></pre></div>
+<p><br />
+</p>
+<p><strong>2.2 Combine NASS and mp3 data</strong></p>
+<p>The NASS data contains a whole bunch of stuff we don’t need, so first
+we’ll pare it down to just ‘Year’ and ‘Value’. While we’re doing that,
+we’ll also rename the NASS variables. We’ll change ‘Year’ to ‘year’ so
+it matches the variable in mp3 exactly (we need that for the next step),
+and we’ll change ‘Value’ to ‘nat_ave’ for national average.</p>
+<p>Once NASS is pared down, we’ll add the ‘nat_ave’ variable to the mp3
+dataset and match the data up by ‘year’.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="do">## remove everything from NASS except &#39;Year&#39; and &#39;Value&#39;</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>NASS <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(NASS, <span class="at">year =</span> Year, <span class="at">nat_ave =</span> Value)</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="do">## join mp3 and NASS data by &#39;year&#39;</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>mp3_NASS <span class="ot">&lt;-</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  mp3 <span class="sc">%&gt;%</span> </span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(NASS, <span class="at">by =</span> <span class="st">&quot;year&quot;</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">head</span>(mp3_NASS)</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 4</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="co">#&gt; # Groups:   year [6]</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="co">#&gt;    year treated mp_ave nat_ave</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="co">#&gt;   &lt;dbl&gt; &lt;lgl&gt;    &lt;dbl&gt;   &lt;dbl&gt;</span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="co">#&gt; 1  1888 FALSE     54.3    29.1</span></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co">#&gt; 2  1889 FALSE     43.2    29.5</span></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="co">#&gt; 3  1890 FALSE     48.7    22.1</span></span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="co">#&gt; 4  1891 FALSE     28.6    29.6</span></span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="co">#&gt; 5  1892 FALSE     33.1    24.7</span></span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a><span class="co">#&gt; 6  1893 FALSE     21.7    23.8</span></span></code></pre></div>
+<p><br />
+</p>
+</div>
+<div id="add-national-data-to-the-morrow-plots-graph" class="section level2">
+<h2>3. Add national data to the Morrow Plots graph</h2>
+<p>You should now have NASS and mp3_NASS datasets in your R
+environment.</p>
+<p><br />
+</p>
+<p><strong>3.1 Plotting the combined data</strong></p>
+<p>We can now recreate our geom_smooth graph from above using the
+mp3_NASS data, and add a black dashed line to show the national
+average.</p>
+<p>Since this is our final graph, we can also add a title and subtitle
+to provide context, and a built-in theme to change the look of the
+graph.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(<span class="at">data =</span> mp3_NASS) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  </span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>  <span class="do">## mp_ave color coded by &#39;treated&#39;</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_smooth</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y =</span> mp_ave, <span class="at">color =</span> treated))<span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  <span class="do">## add nat_ave as a dashed black line in the same graph</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_smooth</span>(ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y =</span> nat_ave), <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>)<span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>  </span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>  <span class="do">## add title and subtitle</span></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Morrow Plots Continuous Corn Yield Trends in Bushels per Acre&quot;</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Compared to the U.S. national average (dashed line)&quot;</span></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>       )<span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>  </span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a>  <span class="do">## add one of the built-in themes</span></span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_light</span>()</span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</span></span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p><br />
+</p>
+<p><strong>3.2 Interpreting the Results</strong></p>
+<p>Now that you have a combined graph, how do the data compare?</p>
+<p>The untreated continuous corn (that’s where corn is grown every
+single year with no fertility treatments) starts out performing slightly
+better than the national average, but begins to dip over time as the
+untreated soil is depleted. Even so, Illinois soil is so rich that the
+untreated corn is pretty similar to the national average until the late
+1930’s when the national average starts to rise up and break away. Why
+is that? One reason is that around that time, hybrid corn was
+introduced, and it performed better than previously popular corn breeds.
+Hybrid corn was introduced into the Morrow Plots in 1937, which is one
+reason why we see both the treated and untreated yields start to rise
+after that.</p>
+<p>The treated continuous corn rises a lot higher than the untreated
+yields, but why does it eventually plateau while the national average
+keeps rising? One reason is the other major variable in the Morrow Plots
+experiment - crop rotation. Planting corn year after year eventually
+depletes the soil, even when the soil is treated. This graph only
+includes data from continuous corn. If you repeat these steps with corn
+yields from Plot 4 or 5, both of which rotate corn with other crops,
+you’d see that those plots perform better over the long term.</p>
+<p>You did it! You combined datasets and graphs, plus you bothered to
+read through the interpretation, which proves you really care about
+data. Well done!</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
