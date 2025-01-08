@@ -1,6 +1,6 @@
 Package: morrowplots
 Title: Historical Agricultural Data from the University of Illinois
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
    	person("Sandi", "Caldrone", email = "caldron2@illinois.edu", 
    	role = c("cre","aut","cph"), comment = c(ORCID = "0000-0001-6392-5279")), 
@@ -18,7 +18,7 @@ Description: Agricultural data for 1888-2021 from the Morrow Plots at the
     other crops, in treated and untreated soil.
 License: MIT + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Depends: R (>= 2.10)
 LazyData: true
 Suggests: dplyr, ggplot2, knitr, rmarkdown
@@ -27,7 +27,7 @@ URL: https://SandiCal.github.io/morrowplots/,
         https://github.com/SandiCal/morrowplots
 BugReports: https://github.com/SandiCal/morrowplots/issues
 NeedsCompilation: no
-Packaged: 2024-05-06 21:52:37 UTC; caldron2
+Packaged: 2025-01-08 21:23:27 UTC; caldron2
 Author: Sandi Caldrone [cre, aut, cph]
     (<https://orcid.org/0000-0001-6392-5279>),
   Heidi Imker [aut, cph] (<https://orcid.org/0000-0003-4748-7453>),
@@ -35,4 +35,4 @@ Author: Sandi Caldrone [cre, aut, cph]
   Brooke Anderson [ctb]
 Maintainer: Sandi Caldrone <caldron2@illinois.edu>
 Repository: CRAN
-Date/Publication: 2024-05-07 08:10:08 UTC
+Date/Publication: 2025-01-08 21:40:02 UTC

@@ -5,12 +5,12 @@
 
 <!-- badges: start -->
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/TBD)](https://cran.r-project.org/package=morrowplots)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/morrowplots)](https://cran.r-project.org/package=morrowplots)
 [![R-CMD-check](https://github.com/SandiCal/morrowplots/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/SandiCal/morrowplots/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-Use morrowplots to load, explore, and analyze nearly 150 years of ag
-data from the historic [Morrow
+Use morrowplots to load, explore, and analyze nearly 150 years of
+agricultural data from the historic [Morrow
 Plots](https://aces.illinois.edu/research/history/morrow-plots) at the
 [University of Illinois Urbana-Champaign](https://illinois.edu/). Data
 collection and formats have evolved over time, and this dataset was
@@ -50,20 +50,20 @@ library(knitr)
 kable(morrowplots[1:12, ])
 ```
 
-| phase | year | plot | plot_num | plot_dir | rotation | corn | crop | variety      | all_corn | yield_bush | yield_ton | treated | treatment | manure | lime | nit | p205 | k20 | stover | population | plant_date | plant_day | soil_sample | damage | notes |
-|------:|-----:|:-----|---------:|:---------|---------:|:-----|:-----|:-------------|:---------|-----------:|----------:|:--------|:----------|-------:|-----:|----:|-----:|----:|-------:|-----------:|:-----------|----------:|:------------|:-------|:------|
-|     1 | 1888 | 3NA  |        3 | NW       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 3NB  |        3 | NW       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 3NC  |        3 | NE       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 3ND  |        3 | NE       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 3SA  |        3 | SW       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 3SB  |        3 | SW       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 3SC  |        3 | SE       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 3SD  |        3 | SE       |        1 | TRUE | CC   | Burr’s White | FALSE    |       54.3 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 4NA  |        4 | NW       |        2 | TRUE | C    | Burr’s White | FALSE    |       49.5 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 4NB  |        4 | NW       |        2 | TRUE | C    | Burr’s White | FALSE    |       49.5 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 4NC  |        4 | NE       |        2 | TRUE | C    | Burr’s White | FALSE    |       49.5 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
-|     1 | 1888 | 4ND  |        4 | NE       |        2 | TRUE | C    | Burr’s White | FALSE    |       49.5 |        NA | FALSE   | none      |     NA |   NA |  NA |   NA |  NA |     NA |         NA | 1888-05-04 |       125 | FALSE       | NA     | NA    |
+| phase | year | plot | plot_num | plot_dir | rotation | corn | crop | variety | all_corn | yield_bush | yield_ton | treated | treatment | manure | lime | nit | p205 | k20 | stover | population | plant_date | plant_day | soil_sample | damage | notes |
+|---:|---:|:---|---:|:---|---:|:---|:---|:---|:---|---:|---:|:---|:---|---:|---:|---:|---:|---:|---:|---:|:---|---:|:---|:---|:---|
+| 1 | 1888 | 3NA | 3 | NW | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 3NB | 3 | NW | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 3NC | 3 | NE | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 3ND | 3 | NE | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 3SA | 3 | SW | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 3SB | 3 | SW | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 3SC | 3 | SE | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 3SD | 3 | SE | 1 | TRUE | CC | Burr’s White | FALSE | 54.3 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 4NA | 4 | NW | 2 | TRUE | C | Burr’s White | FALSE | 49.5 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 4NB | 4 | NW | 2 | TRUE | C | Burr’s White | FALSE | 49.5 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 4NC | 4 | NE | 2 | TRUE | C | Burr’s White | FALSE | 49.5 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
+| 1 | 1888 | 4ND | 4 | NE | 2 | TRUE | C | Burr’s White | FALSE | 49.5 | NA | FALSE | none | NA | NA | NA | NA | NA | NA | NA | 1888-05-04 | 125 | FALSE | NA | NA |
 
 ## Variables
 
@@ -208,7 +208,7 @@ manure
 <dd>
 <p>
 An integer for the specific amount of manure applied to this plot this
-year in lbs/acre.
+year in lbs/plot.
 </p>
 </dd>
 <dt>
@@ -313,6 +313,6 @@ fields.
 Source
 </h3>
 <p>
-Published dataset in the Illinios Data Bank
-doi.org/10.13012/B2IDB-7865141_V1
+Dataset published in the Illinois Data Bank at
+doi.org/10.13012/B2IDB-7865141_V2
 </p>
